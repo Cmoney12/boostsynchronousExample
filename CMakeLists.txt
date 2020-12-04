@@ -1,14 +1,11 @@
 cmake_minimum_required(VERSION 3.17)
-project(AsyncChattServerNewAttempt)
-
+project(boostoneThousandExampleClient)
 set(CMAKE_CXX_STANDARD 14)
 FIND_PACKAGE(Boost 1.42.0 REQUIRED COMPONENTS system thread regex)
 IF(Boost_FOUND)
     INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
     LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
 ENDIF(Boost_FOUND)
-
 SET(USED_LIBS ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBRARY})
-
-add_executable(AsyncServerNewAttempt main.cpp)
-TARGET_LINK_LIBRARIES(AsyncServerNewAttempt ${USED_LIBS})
+add_executable(boostoneThousandExampleClient main.cpp)
+TARGET_LINK_LIBRARIES(boostoneThousandExampleClient ${USED_LIBS})
